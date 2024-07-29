@@ -29,7 +29,7 @@ main{
 }
 #bloco{
     background-color: var(--White);
-    width: 60%;
+    width: 900px;
     border-radius:50px 50px 500px 50px;
 }
 #imputs{
