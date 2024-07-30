@@ -1,0 +1,79 @@
+:root{
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+--White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+--Offblack: hsl(0, 0%, 8%);
+--fonte:"Poppins", sans-serif;
+}
+p{
+    font-family: var(--fonte);
+    font-size: 32px;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: var(--Offwhite);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bloco{
+    background-color: var(--White);
+    width: 900px;
+    border-radius:50px 50px 500px 50px;
+}
+#imputs{
+    display: flex;
+}
+input{
+    font-size:40px;
+    font-weight: 700;
+    width: 150px;
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+#button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#linha{
+    background-color: var(--Lightgrey);
+    height: 5px;
+    width: 75%;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--Purple);
+}
+
+#resultado{
+    font-weight: 900;
+    font-style: italic;
+    
+}
+#resultado p{
+    font-size: 50px;
+}
+#resultado span{
+    
+    color: var(--Purple);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
