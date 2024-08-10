@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: RedHatText-Bold ;
+    src: url(assets/fonts/static/RedHatText-Bold.ttf);
+}
+@font-face {
+    font-family: RedHatText-Regular ;
+    src: url(assets/fonts/static/RedHatText-Regular.ttf);
+}
+@font-face {
+    font-family: RedHatText-SemiBold ;
+    src: url(assets/fonts/static/RedHatText-SemiBold.ttf);
+}
+@font-face {
+    font-family: RedHatText-Italic-VariableFont_wght ;
+    src: url(assets/fonts/RedHatText-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: RedHatText-VariableFont_wght ;
+    src: url(assets/fonts/RedHatText-VariableFont_wght.ttf);
+}
+h1{
+    font-family: RedHatText-Bold;
+    padding: 20px 0px;
+    font-size: 3em;
+}
+h2{
+    font-family: RedHatText-SemiBold;
+    font-size: medium;
+}
+p{
+    font-family: RedHatText-Regular ;
+    color: rgb(145, 145, 145);
+}
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+#img-add-cart{
+    width: 300px;
+    position: relative;
+    margin-bottom: 30px;
+}
+#img-add-cart p{
+    color: black;
+    font-family:RedHatText-SemiBold ;
+}
+#img{
+    width: 300px;
+    border-radius: 10px;
+}
+
+#add-cart{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 50%;
+    right: 22%;
+    bottom: -8%;
+    position: absolute;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(146, 146, 146);
+}
+#preco {
+    color: hsl(14, 72%, 52%);
+}
+#carrinho{
+    margin-left: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#carrinho h1{
+   font-size: 1.5rem;
+    color:hsl(14, 72%, 52%);
+}
+#carrinho svg{
+    font-family: RedHatText-Bold ;
+    margin: auto;
+}
+#carrinho p{
+    color:  hsl(0, 10%, 58%);
+    font-family: RedHatText-SemiBold;
+    text-align: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
