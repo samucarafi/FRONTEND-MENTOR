@@ -1,7 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+
 
 @font-face {
     font-family: RedHatText-Bold ;
@@ -22,6 +19,15 @@
 @font-face {
     font-family: RedHatText-VariableFont_wght ;
     src: url(assets/fonts/RedHatText-VariableFont_wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1{
     font-family: RedHatText-Bold;
