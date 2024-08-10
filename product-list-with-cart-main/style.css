@@ -49,6 +49,9 @@ p{
     flex-direction: column;
     margin-left: 10px;
 }
+#item{
+    padding: 20px 0px;
+}
 #img-add-cart{
     width: 300px;
     position: relative;
@@ -84,6 +87,7 @@ p{
     width: 300px;
     display: flex;
     flex-direction: column;
+    padding: 20px 0px;
 }
 #carrinho h1{
    font-size: 1.5rem;
