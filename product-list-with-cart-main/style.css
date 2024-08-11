@@ -63,7 +63,7 @@ p{
 }
 
 #add-cart{
-    cursor: pointer;
+    cursor:pointer;
     display: flex;
     justify-content:center;
     background-color: white;
