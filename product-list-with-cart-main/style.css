@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family: RedHatText-Bold ;
     src: url(assets/fonts/static/RedHatText-Bold.ttf);
@@ -49,9 +48,6 @@ p{
     flex-direction: column;
     margin-left: 10px;
 }
-#item{
-    padding: 20px 0px;
-}
 #img-add-cart{
     width: 300px;
     position: relative;
@@ -69,7 +65,7 @@ p{
 #add-cart{
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     background-color: white;
     width: 50%;
     right: 22%;
@@ -79,6 +75,17 @@ p{
     border-radius: 20px;
     border: 1px solid rgb(146, 146, 146);
 }
+.button{
+    cursor: pointer;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
 #preco {
     color: hsl(14, 72%, 52%);
 }
@@ -87,7 +94,6 @@ p{
     width: 300px;
     display: flex;
     flex-direction: column;
-    padding: 20px 0px;
 }
 #carrinho h1{
    font-size: 1.5rem;
