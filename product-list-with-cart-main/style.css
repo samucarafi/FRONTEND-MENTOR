@@ -99,13 +99,23 @@ p{
     border-radius: 50%;
     background-color: hsl(14, 72%, 52%) ;
 }
-
+.input{
+    cursor: default;
+    width: 40px;
+    background-color: hsl(14, 72%, 52%);
+    border: none;
+    text-align: center;
+}
 #preco {
     color: hsl(14, 72%, 52%);
 }
 #carrinho{
     margin-left: 10px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#carrinho_vazio{
     display: flex;
     flex-direction: column;
 }
