@@ -1,28 +1,28 @@
 let add_cart=[...document.getElementsByClassName('add-cart')]
+let add_to_cart=[...document.getElementsByClassName('add-to-cart')]
+let buttons=[...document.getElementsByClassName('buttons')]
+let span=[...document.getElementsByClassName('span')]
+let somar=[...document.getElementsByClassName('somar')]
+let diminuir=[...document.getElementsByClassName('diminuir')]
+
+let Umavez=[]
 
 
 add_cart.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-         if(umaVez[i]){
-         evt.style.backgroundColor='hsl(14, 72%, 52%)'
-         evt.innerHTML=''
-         evt.style.justifyContent='space-between'
-         evt.style.cursor='default'
-         let diminuir=document.createElement('div')
-         diminuir.setAttribute('type','button')
-         diminuir.setAttribute('class','button diminuir')
-         diminuir.innerHTML=' - '
-         evt.appendChild(diminuir)
-         let quant=document.createElement('span')
-         quant.setAttribute('class','span')
-         quant.innerHTML=1
-         evt.appendChild(quant)
-         let soma=document.createElement('div')
-         soma.setAttribute('type','button')
-         soma.setAttribute('class','button soma')
-         soma.innerHTML='+'
-         evt.appendChild(soma)
-         }
+            
+            span[i].innerHTML=1
+            evt.style.backgroundColor='hsl(14, 72%, 52%)'
+            evt.style.cursor='default'
+            add_to_cart[i].style.display='none'
+            buttons[i].style.display='flex'
+            
+      })
+})
+
+diminuir.forEach((evt,i)=>{
+      evt.addEventListener('click',()=>{
+            console.log(add_cart[i])
       })
 })
 
