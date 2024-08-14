@@ -106,7 +106,16 @@ p{
     border: none;
     text-align: center;
 }
-.preco {
+.valor {
+    color: hsl(14, 72%, 52%);
+    font-family: RedHatText-SemiBold;
+    font-size: medium;
+}
+.valor input{
+    width: 50px;
+    font-family: RedHatText-SemiBold;
+    border: none;
+    font-size: medium;
     color: hsl(14, 72%, 52%);
 }
 #carrinho{
@@ -124,8 +133,24 @@ p{
     flex-direction: column;
     align-items: center;
 }
-#carrinho_cheio img{
-    width: 100px;
+.carrinho_atual{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.nome{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.remove{
+    width: 20px;
+    border-radius: 50%;
+}
+.valores{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 #carrinho h1{
    font-size: 1.5rem;
