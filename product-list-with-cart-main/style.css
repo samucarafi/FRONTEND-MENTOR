@@ -57,7 +57,7 @@ p{
     color: black;
     font-family:RedHatText-SemiBold ;
 }
-#img{
+.img{
     width: 300px;
     border-radius: 10px;
 }
@@ -106,7 +106,7 @@ p{
     border: none;
     text-align: center;
 }
-#preco {
+.preco {
     color: hsl(14, 72%, 52%);
 }
 #carrinho{
@@ -118,6 +118,14 @@ p{
 #carrinho_vazio{
     display: flex;
     flex-direction: column;
+}
+#carrinho_cheio{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#carrinho_cheio img{
+    width: 100px;
 }
 #carrinho h1{
    font-size: 1.5rem;
