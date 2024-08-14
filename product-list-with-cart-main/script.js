@@ -14,7 +14,7 @@ let clickRemover=()=>{//falta configurar para retirar marcação no add_card
       let remover=[...document.getElementsByClassName('remove')]
       let carrinho_atual=[...document.getElementsByClassName('carrinho_atual')]
       remover.forEach((evt,i)=>{
-            evt.addEventListener('click',()=>{
+            evt.addEventListener('click',()=>{ 
                   carrinho_atual[i].remove()
             })
       })
