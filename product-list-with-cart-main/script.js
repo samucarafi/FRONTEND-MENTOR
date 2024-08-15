@@ -9,6 +9,8 @@ let carrinho_cheio=document.getElementById('carrinho_cheio')
 let img=[...document.getElementsByClassName('img')]
 let item=[...document.getElementsByClassName('item')]
 let preco=[...document.getElementsByClassName('preco')]
+let yourCart=document.getElementById('yourCart')
+yourCart.innerHTML=0
 
 let clickRemover=()=>{//falta configurar para retirar marcação no add_card
       let remover=[...document.getElementsByClassName('remove')]
@@ -63,7 +65,7 @@ let itemIgual=(i)=>{
 
 add_to_cart.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-            console.log('clicou')
+            yourCart.innerHTML++
             add_cart[i].style.backgroundColor='hsl(14, 72%, 52%)'
             add_cart[i].style.cursor='default'
             add_to_cart[i].style.display='none'
@@ -78,7 +80,7 @@ add_to_cart.forEach((evt,i)=>{
 
 diminuir.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-            console.log(input[i].value)
+            yourCart.innerHTML--
             if(input[i].value==1){
                   add_cart[i].style.backgroundColor='#fff'
                   add_to_cart[i].style.display='flex'
@@ -98,6 +100,8 @@ diminuir.forEach((evt,i)=>{
 
 somar.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
+            yourCart.innerHTML++
+            
             input[i].value++
             itemIgual(i)
             criarDiv(i)
