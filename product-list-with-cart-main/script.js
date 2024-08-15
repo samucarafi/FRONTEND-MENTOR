@@ -11,6 +11,7 @@ let item=[...document.getElementsByClassName('item')]
 let preco=[...document.getElementsByClassName('preco')]
 let yourCart=document.getElementById('yourCart')
 yourCart.innerHTML=0
+let totOrd=0
 
 let resetAddCart=(i)=>{
       add_cart[i].style.backgroundColor='#fff'
@@ -34,9 +35,11 @@ let clickRemover=()=>{
                   let ind=i
                   add_to_cart.forEach((evt,i)=>{
                         if(evt.id==carrinho_atual[ind].id){
+                              yourCart.innerHTML= yourCart.innerHTML-input[i].value
                               resetAddCart(i)
                         }    
                   })
+                  
                   carrinho_atual[i].remove()
 
                   if(carrinho_cheio.children.length==0){
@@ -103,7 +106,7 @@ add_to_cart.forEach((evt,i)=>{
 
 diminuir.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-            yourCart.innerHTML++
+            yourCart.innerHTML--
             if(input[i].value==1){
                   resetAddCart(i)
                   if(carrinho_cheio.children.length==1){
@@ -122,7 +125,6 @@ diminuir.forEach((evt,i)=>{
 somar.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
             yourCart.innerHTML++
-            
             input[i].value++
             itemIgual(i)
             criarDiv(i)
