@@ -103,6 +103,7 @@ add_to_cart.forEach((evt,i)=>{
 
 diminuir.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
+            yourCart.innerHTML++
             if(input[i].value==1){
                   resetAddCart(i)
                   if(carrinho_cheio.children.length==1){
