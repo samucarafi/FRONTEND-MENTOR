@@ -9,6 +9,8 @@ let carrinho_cheio=document.getElementById('carrinho_cheio')
 let img=[...document.getElementsByClassName('img')]
 let item=[...document.getElementsByClassName('item')]
 let preco=[...document.getElementsByClassName('preco')]
+let yourCart=document.getElementById('yourCart')
+yourCart.innerHTML=0
 
 let resetAddCart=(i)=>{
       add_cart[i].style.backgroundColor='#fff'
@@ -87,7 +89,7 @@ let itemIgual=(i)=>{
 
 add_to_cart.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-            console.log('clicou')
+            yourCart.innerHTML++
             add_cart[i].style.backgroundColor='hsl(14, 72%, 52%)'
             add_cart[i].style.cursor='default'
             add_to_cart[i].style.display='none'
@@ -118,6 +120,8 @@ diminuir.forEach((evt,i)=>{
 
 somar.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
+            yourCart.innerHTML++
+            
             input[i].value++
             itemIgual(i)
             criarDiv(i)
