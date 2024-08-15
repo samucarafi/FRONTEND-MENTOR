@@ -12,16 +12,40 @@ let preco=[...document.getElementsByClassName('preco')]
 let yourCart=document.getElementById('yourCart')
 yourCart.innerHTML=0
 
-let clickRemover=()=>{//falta configurar para retirar marcação no add_card
+let resetAddCart=(i)=>{
+      add_cart[i].style.backgroundColor='#fff'
+      add_to_cart[i].style.display='flex'
+      add_cart[i].style.cursor='pointer'
+      buttons[i].style.display='none'
+      input[i].value=0
+}
+
+let resetCarrinho=()=>{
+      carrinho_cheio.innerHTML=''
+      carrinho_cheio.style.display='none'
+      carrinho_vazio.style.display='flex'
+}
+
+let clickRemover=()=>{
       let remover=[...document.getElementsByClassName('remove')]
       let carrinho_atual=[...document.getElementsByClassName('carrinho_atual')]
       remover.forEach((evt,i)=>{
             evt.addEventListener('click',()=>{ 
+                  let ind=i
+                  add_to_cart.forEach((evt,i)=>{
+                        if(evt.id==carrinho_atual[ind].id){
+                              resetAddCart(i)
+                        }    
+                  })
                   carrinho_atual[i].remove()
+
+                  if(carrinho_cheio.children.length==0){
+                        resetCarrinho()
+                  }
             })
       })
 }
- 
+
 let criarDiv=(i)=>{
       let div=document.createElement('div')
       div.setAttribute('id',item[i].innerHTML)
@@ -73,23 +97,19 @@ add_to_cart.forEach((evt,i)=>{
             input[i].value=1
             criarDiv(i)
             carrinho_vazio.style.display='none'
-            carrinho_cheio.style.display='flex'
-            
+            carrinho_cheio.style.display='flex'  
       })
 })
 
 diminuir.forEach((evt,i)=>{
       evt.addEventListener('click',()=>{
-            yourCart.innerHTML--
             if(input[i].value==1){
-                  add_cart[i].style.backgroundColor='#fff'
-                  add_to_cart[i].style.display='flex'
-                  add_cart[i].style.cursor='pointer'
-                  buttons[i].style.display='none'
-                  input[i].value=0
-                  carrinho_cheio.innerHTML=''
-                  carrinho_cheio.style.display='none'
-                  carrinho_vazio.style.display='flex'
+                  resetAddCart(i)
+                  if(carrinho_cheio.children.length==1){
+                        resetCarrinho()
+                  }else{
+                        itemIgual(i)
+                  }
             }else{
                   input[i].value--
                   itemIgual(i)
@@ -105,12 +125,5 @@ somar.forEach((evt,i)=>{
             input[i].value++
             itemIgual(i)
             criarDiv(i)
-            
-      })
-})
-
-carrinho_cheio.children.forEach((evt,i)=>{
-      evt.addEventListener('click',()=>{
-            evt.remove()
       })
 })
