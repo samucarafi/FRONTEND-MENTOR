@@ -1,20 +1,49 @@
 body{
-    width: 100vw;
+    width: 97vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 header{
-    width: 100%;
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.menu{
+    display: none ;
+}
+.hamburguer{
+    display: block;
+    cursor: pointer;
+
+}
+.iconeTemas{
+    background-color: #223344;
+    padding: 2px;
+    border-radius: 20px;
+    display: none;
+
+}
+.sol{
+    background-color: white;
+    border-radius: 20px;
+}
+.linkMenu{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    padding: 0px 20px;
+    color: #909193;
+}
+.linkMenu:hover{
+    color: #111729;
+}
 main{
-    width: 100%;
+    margin: 30px;
 }
 h1{
     font-family: "Poppins", sans-serif;
     color: #223344;
-    font-size: 60px;
+    font-size: 50px;
     
 }
 h2{
@@ -28,14 +57,14 @@ p{
     color: #909193;
     font-weight: bold;
 }
-a{
+.link{
     font-family: "Poppins", sans-serif;
     color: #2A4DD0;
     font-weight: bolder;
     padding: 10px 20px;
 }
 #img_principal{
-    width: 100%;
+    width: 90%;
     margin: 0px 50px;
 }
 button{
@@ -48,7 +77,7 @@ button{
     color: white;
 }
 footer{
-    width: 100%;
+    margin: 30px;
     display: flex;
     margin-bottom: 30px;
 }
@@ -59,4 +88,16 @@ footer{
 }
 
 @media screen and (min-width: 720px) {
+
+    .menu{
+        display: block;
+    }
+    .hamburguer{
+        display: none;
+
+    }
+    .iconeTemas{
+        cursor: pointer;
+        display: flex;
+    }
 }
