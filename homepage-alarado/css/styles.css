@@ -147,7 +147,17 @@ footer{
 }
 
 @media screen and (min-width: 1024px ) and (max-width:1280px) {
-
+    .linkMenu{
+        font-size: 2rem;
+    }
+    #img{
+        padding: 10px;
+    }
+    .janela{
+        width: 83%;
+        flex-direction: row;
+        position: static;
+    }
     .menu{
         display: block;
     }
@@ -169,6 +179,17 @@ footer{
 }
 
 @media screen and (min-width: 1280px ) {
+    .linkMenu{
+        font-size: 2rem;
+    }
+    #img{
+        padding: 10px;
+    }
+    .janela{
+        width: 83%;
+        flex-direction: row;
+        position: static;
+    }
     .menu{
         display: block;
     }
@@ -180,7 +201,11 @@ footer{
         display: flex;
     }
     main{
+        padding-top: 100px;
         flex-flow: row-reverse;
+    }
+    h1{
+        font-size: 4rem;
     }
     .divImg{
         width: 70%;

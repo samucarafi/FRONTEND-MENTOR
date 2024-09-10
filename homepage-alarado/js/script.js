@@ -4,7 +4,8 @@ let menu=document.querySelector('.menu')
 let iconeTemas=document.querySelector('.iconeTemas')
 let body=document.querySelector('.body')
 let janela=document.querySelector('.janela')
-let h1=document.getElementsByTagName
+let h1=document.getElementsByTagName('h1')
+let h3=document.getElementsByTagName('h3')
 
 class Tema{
     constructor(corBody, corIcone){
@@ -14,7 +15,7 @@ class Tema{
     ativar=()=>{
         body.style.background = this.corBody
         iconeTemas.style.background=this.corIcone
-        
+
     }
 }
 
@@ -38,7 +39,8 @@ hamburguer.addEventListener('click',()=>{
 })
 
 iconeTemas.addEventListener('click',()=>{
-    console.log()
+    h1[0].classList.toggle('h1h3TemaEscuro')
+    h3[0].classList.toggle('h1h3TemaEscuro')
     if(body.style.backgroundColor=="rgb(17, 23, 41)"){
         temaClaro.ativar()
     }else{temaEscuro.ativar()}
