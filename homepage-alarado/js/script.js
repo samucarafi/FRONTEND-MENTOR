@@ -4,6 +4,7 @@ let menu=document.querySelector('.menu')
 let iconeTemas=document.querySelector('.iconeTemas')
 let body=document.querySelector('.body')
 let janela=document.querySelector('.janela')
+let h1=document.getElementsByTagName
 
 class Tema{
     constructor(corBody, corIcone){
@@ -13,6 +14,7 @@ class Tema{
     ativar=()=>{
         body.style.background = this.corBody
         iconeTemas.style.background=this.corIcone
+        
     }
 }
 
@@ -26,10 +28,12 @@ hamburguer.addEventListener('click',()=>{
     menu.style.flexDirection='column'
     iconeTemas.style.display='flex'
     janela.style.height='100%'
+    janela.style.backgroundColor='white'
     }else{
         menu.style.display='none'
         iconeTemas.style.display='none'
         janela.style.height=''
+        janela.style.backgroundColor=''
     }
 })
 
