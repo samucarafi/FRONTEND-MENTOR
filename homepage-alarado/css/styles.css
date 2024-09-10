@@ -3,6 +3,9 @@ body{
     height: 100vh;
     overflow-x: hidden;
 }
+.temaEscuro{
+    background-color: #111729;
+}
 
 /*Cabeçalho*/
 header{
@@ -57,9 +60,12 @@ header{
     color: #111729;
 }
 /*Fim Cabeçalho*/
-
 main{
-    margin: 30px;
+    display: flex;
+    flex-flow: column;
+}
+article{
+    margin: 0px 40px;
 }
 h1{
     font-family: "Poppins", sans-serif;
@@ -84,9 +90,11 @@ p{
     font-weight: bolder;
     padding: 10px 20px;
 }
+.divImg{
+    width: 100%;
+}
 #img_principal{
-    width: 90%;
-    margin: 0px 50px;
+    width: 100%;
 }
 button{
     font-family: "Poppins", sans-serif;
@@ -98,9 +106,8 @@ button{
     color: white;
 }
 footer{
-    margin: 30px;
+    margin: 40px;
     display: flex;
-    margin-bottom: 30px;
 }
 .footer{
     padding-right: 20px;
@@ -108,17 +115,53 @@ footer{
     display: flex;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1024px ) and (max-width:1280px) {
 
     .menu{
         display: block;
     }
     .hamburguer{
         display: none;
-
     }
     .iconeTemas{
         cursor: pointer;
         display: flex;
     }
+    .divImg{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #img_principal{
+        width: 800px;
+    }
+}
+
+@media screen and (min-width: 1280px ) {
+    .menu{
+        display: block;
+    }
+    .hamburguer{
+        display: none;
+    }
+    .iconeTemas{
+        cursor: pointer;
+        display: flex;
+    }
+    main{
+        flex-flow: row-reverse;
+    }
+    .divImg{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
+    #img_principal{
+        width: 600px;
+    }
+    article{
+        width: 30%;
+    }
+
+    
 }
