@@ -3,6 +3,7 @@ const bar=[...document.getElementsByClassName("bar")]
 let menu=document.querySelector('.menu')
 let iconeTemas=document.querySelector('.iconeTemas')
 let body=document.querySelector('.body')
+let janela=document.querySelector('.janela')
 
 class Tema{
     constructor(corBody, corIcone){
@@ -20,6 +21,16 @@ const temaClaro=new Tema('white','#111729')
 
 hamburguer.addEventListener('click',()=>{
     hamburguer.classList.toggle('ativo')
+    if(hamburguer.classList.contains('ativo')){
+    menu.style.display='flex'
+    menu.style.flexDirection='column'
+    iconeTemas.style.display='flex'
+    janela.style.height='100%'
+    }else{
+        menu.style.display='none'
+        iconeTemas.style.display='none'
+        janela.style.height=''
+    }
 })
 
 iconeTemas.addEventListener('click',()=>{
